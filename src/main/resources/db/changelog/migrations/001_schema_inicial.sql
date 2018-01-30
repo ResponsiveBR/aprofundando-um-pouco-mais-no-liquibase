@@ -21,3 +21,7 @@ CREATE TABLE IF NOT EXISTS image (
 );
 --rollback ALTER TABLE image DROP CONSTRAINT product_image_fkey;
 --rollback DROP TABLE image;
+
+--changeset marcopollivier:3
+ALTER TABLE image ADD COLUMN description VARCHAR(1024);
+--rollback ALTER TABLE image DROP COLUMN description;
